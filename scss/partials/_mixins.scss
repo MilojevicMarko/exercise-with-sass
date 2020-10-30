@@ -1,0 +1,88 @@
+@mixin border-radius($radius: 50%) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin rotate($degree) {
+  -webkit-transform: rotate($degree);
+  -moz-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+@mixin transition($transition) {
+  -webkit-transition: ($transition);
+  -moz-transition: ($transition);
+  transition: ($transition);
+}
+
+@mixin transition-property($property) {
+  -webkit-transform: ($property);
+  -moz-transform: ($property);
+  transition: ($property);
+}
+
+@mixin transition-duration($duration) {
+  -webkit-transform: ($duration);
+  -moz-transform: ($duration);
+  transition: ($duration);
+}
+
+@mixin mix-fun($header-bkg, $header-padding, $link-bkg-odd, $link-color-odd, $link-border-odd, $link-bkg-even, $link-color-even, $link-border-even) {
+  header {
+    background-color: $header-bkg;
+    padding: $header-padding;
+    margin-bottom: 20px;
+
+    ol {
+      @extend %list-reset;
+      display: table;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+
+      li {
+        margin: 10px;
+
+        a {
+          display: block;
+          width: 50px;
+          height: 50px;
+          @include border-radius;
+          line-height: 48px;
+          text-align: center;
+          text-decoration: none;
+          transition: all .2s;
+        }
+
+        &:nth-child(odd) {
+          a {
+            background-color: $link-bkg-odd;
+            color: $link-color-odd;
+            border: 2px solid $link-border-odd;
+
+            &:hover {
+              background-color: $link-bkg-even;
+              color: $link-color-even;
+              border: 2px solid $link-border-even;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          a {
+            background-color: $link-bkg-even;
+            counter-reset: $link-color-even;
+            border: 2px solid $link-border-even;
+
+            &:hover {
+              background-color: $link-bkg-odd;
+              counter-reset: $link-color-odd;
+              border: 2px solid $link-border-odd;
+            }
+          }
+        }
+      }
+    }
+  }
+}

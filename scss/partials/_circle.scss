@@ -1,0 +1,16 @@
+.circle {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  margin: 50px auto;
+  background-color: $orange;
+  color: $grey;
+  text-align: center;
+  cursor: pointer;
+  @include border-radius;
+  @include transition(all .4s);
+  &:hover {
+    @include rotate(360deg);
+    background-color:transparentize($orange,.8);
+  }
+}

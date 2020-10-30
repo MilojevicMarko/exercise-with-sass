@@ -1,0 +1,57 @@
+@import "partials/variables";
+@import "partials/fonts";
+@import "partials/global";
+@import "partials/header";
+@import "partials/helper";
+@import "partials/mixins";
+@import "partials/circle";
+
+h2 {
+  text-align: center;
+}
+.container {
+  width: 1147px;
+  margin: 0 auto;
+  display: flex;
+  main {
+    width: $main-width / 1147px * 100%;
+  }
+  aside {
+    width: $aside-width / 1147px * 100%;
+  }
+  
+  .extend {
+    font-size: 20px;
+    margin-bottom: 50px;
+    display: flex;
+
+    .first {
+      // width: 33.333%;
+      width: (100% / 4);
+      text-align: center;
+      padding: 10px;
+      background-color: $orange;
+      @extend %list-reset;
+    }
+
+    .second {
+      @extend .first;
+      background-color: $grey;
+    }
+
+    .third {
+      @extend .first;
+      background-color: $bkg-color;
+    }
+  }
+}
+
+.mix-fun {
+  @include mix-fun(#ddd, 20px, $orange, $grey, $grey, $grey, $orange, $orange);
+}
+.mix-fun2 {
+  @include mix-fun(#666, 30px 0, beige,brown, brown, brown, beige, beige);
+  }
+  .mix-fun3 {
+    @include mix-fun (#333, 40px 0, #000, #fff, #fff, #fff, #000, #000); 
+  }

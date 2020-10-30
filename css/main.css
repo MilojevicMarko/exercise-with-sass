@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0; }
+  body h1 {
+    color: #333;
+    font-size: 30px; }
+  body p {
+    color: #333;
+    font-size: 18px; }
+
+nav {
+  background-color: #333;
+  padding: 15px 0; }
+  nav ul {
+    display: table;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: space-around; }
+    nav ul li {
+      margin: 0 10px; }
+      nav ul li a {
+        display: block;
+        width: 100px;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        color: #333;
+        background-color: #f90;
+        border: 1px solid #f90;
+        padding: 0 15px; }
+        nav ul li a:hover {
+          color: #cc7a00;
+          background-color: #4d4d4d; }
+    nav ul:first-child {
+      margin-left: 0; }
+    nav ul:last-child {
+      margin-right: 0; }
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.container .extend .first, .container .extend .second, .container .extend .third, .mix-fun header ol, .mix-fun2 header ol, .mix-fun3 header ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table; }
+
+.clearfix::after {
+  clear: both; }
+
+.circle {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  margin: 50px auto;
+  background-color: #f90;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s; }
+  .circle:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+    background-color: rgba(255, 153, 0, 0.2); }
+
+h2 {
+  text-align: center; }
+
+.container {
+  width: 1147px;
+  margin: 0 auto;
+  display: flex; }
+  .container main {
+    width: 60.4184829991%; }
+  .container aside {
+    width: 39.5815170009%; }
+  .container .extend {
+    font-size: 20px;
+    margin-bottom: 50px;
+    display: flex; }
+    .container .extend .first, .container .extend .second, .container .extend .third {
+      width: 25%;
+      text-align: center;
+      padding: 10px;
+      background-color: #f90; }
+    .container .extend .second {
+      background-color: #333; }
+    .container .extend .third {
+      background-color: #eee; }
+
+.mix-fun header {
+  background-color: #ddd;
+  padding: 20px;
+  margin-bottom: 20px; }
+  .mix-fun header ol {
+    display: table;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; }
+    .mix-fun header ol li {
+      margin: 10px; }
+      .mix-fun header ol li a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        transition: all .2s; }
+      .mix-fun header ol li:nth-child(odd) a {
+        background-color: #f90;
+        color: #333;
+        border: 2px solid #333; }
+        .mix-fun header ol li:nth-child(odd) a:hover {
+          background-color: #333;
+          color: #f90;
+          border: 2px solid #f90; }
+      .mix-fun header ol li:nth-child(even) a {
+        background-color: #333;
+        counter-reset: #f90;
+        border: 2px solid #f90; }
+        .mix-fun header ol li:nth-child(even) a:hover {
+          background-color: #f90;
+          counter-reset: #333;
+          border: 2px solid #333; }
+
+.mix-fun2 header {
+  background-color: #666;
+  padding: 30px 0;
+  margin-bottom: 20px; }
+  .mix-fun2 header ol {
+    display: table;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; }
+    .mix-fun2 header ol li {
+      margin: 10px; }
+      .mix-fun2 header ol li a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        transition: all .2s; }
+      .mix-fun2 header ol li:nth-child(odd) a {
+        background-color: beige;
+        color: brown;
+        border: 2px solid brown; }
+        .mix-fun2 header ol li:nth-child(odd) a:hover {
+          background-color: brown;
+          color: beige;
+          border: 2px solid beige; }
+      .mix-fun2 header ol li:nth-child(even) a {
+        background-color: brown;
+        counter-reset: beige;
+        border: 2px solid beige; }
+        .mix-fun2 header ol li:nth-child(even) a:hover {
+          background-color: beige;
+          counter-reset: brown;
+          border: 2px solid brown; }
+
+.mix-fun3 header {
+  background-color: #333;
+  padding: 40px 0;
+  margin-bottom: 20px; }
+  .mix-fun3 header ol {
+    display: table;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; }
+    .mix-fun3 header ol li {
+      margin: 10px; }
+      .mix-fun3 header ol li a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        transition: all .2s; }
+      .mix-fun3 header ol li:nth-child(odd) a {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #fff; }
+        .mix-fun3 header ol li:nth-child(odd) a:hover {
+          background-color: #fff;
+          color: #000;
+          border: 2px solid #000; }
+      .mix-fun3 header ol li:nth-child(even) a {
+        background-color: #fff;
+        counter-reset: #000;
+        border: 2px solid #000; }
+        .mix-fun3 header ol li:nth-child(even) a:hover {
+          background-color: #000;
+          counter-reset: #fff;
+          border: 2px solid #fff; }
+
+/*# sourceMappingURL=main.css.map */

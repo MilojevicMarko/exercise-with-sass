@@ -1,0 +1,29 @@
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+
+%clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+} //when used float
